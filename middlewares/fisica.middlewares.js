@@ -9,7 +9,7 @@ export const validarVelocidad = (req, res, next) => {
     };
 
     if (typeof tiempo !== "number" || typeof distancia !== "number") {
-        return  res.status(400).json({
+        return res.status(400).json({
             error: "El tiempo y la distancia deben ser numeros"
         });
     };

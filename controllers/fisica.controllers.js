@@ -1,4 +1,4 @@
-// contantes de velocidad 
+// constantes de velocidad 
 export const calcularVelocidad = (req, res) => {
     const { distancia, tiempo } = req.body;
     const velocidad = distancia / tiempo;
