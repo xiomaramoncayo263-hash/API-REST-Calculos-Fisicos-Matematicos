@@ -3,7 +3,7 @@ import fondofisica from "../assets/fondofisica.png";
 
 function AreaCirculo() {
 
-    const [radio, SetRadio] = useState(0);
+    const [radio, SetRadio] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularAreaCirculo = async () => {
@@ -36,7 +36,7 @@ function AreaCirculo() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor del radio" onChange={(e) => SetRadio(Number(e.target.value))} 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor del radio" onChange={(e) => SetRadio(Number(e.target.value))} 
                         />
                     </div>
 

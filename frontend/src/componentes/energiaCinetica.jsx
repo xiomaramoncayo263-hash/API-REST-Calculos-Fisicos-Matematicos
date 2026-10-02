@@ -3,8 +3,8 @@ import fondofisica from "../assets/fondofisica.png";
 
 function EnergiaCinetica() {
 
-    const [masa, SetMasa] = useState(0);
-    const [velocidad, SetVelocidad] = useState(0);
+    const [masa, SetMasa] = useState(undefined);
+    const [velocidad, SetVelocidad] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularEnergiaCinetica = async () => {
@@ -38,7 +38,7 @@ function EnergiaCinetica() {
                         </label>
                     
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
                         />
                     </div>
 
@@ -48,7 +48,7 @@ function EnergiaCinetica() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la velocidad" onChange={(e) => SetVelocidad(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la velocidad" onChange={(e) => SetVelocidad(Number(e.target.value))}
                         />
                     </div>
 

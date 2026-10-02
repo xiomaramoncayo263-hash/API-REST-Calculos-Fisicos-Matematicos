@@ -3,8 +3,8 @@ import fondofisica from "../assets/fondofisica.png";
 
 function Angulo() {
 
-    const [x, SetX] = useState(0);
-    const [y, SetY] = useState(0);
+    const [x, SetX] = useState(undefined);
+    const [y, SetY] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularAngulo = async () => {
@@ -38,7 +38,7 @@ function Angulo() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de X" onChange={(e) => SetX(Number(e.target.value))} 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de X" onChange={(e) => SetX(Number(e.target.value))} 
                         />
                     </div>
 
@@ -48,7 +48,7 @@ function Angulo() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de Y" onChange={(e) => SetY(Number(e.target.value))} 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de Y" onChange={(e) => SetY(Number(e.target.value))} 
                         />
                     </div>
 

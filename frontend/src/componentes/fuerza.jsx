@@ -3,13 +3,13 @@ import fondofisica from "../assets/fondofisica.png";
 
 function Fuerza() {
 
-    const [masa, SetMasa] = useState(0);
-    const [aceleracion, SetAceleracion] = useState(0);
+    const [masa, SetMasa] = useState(undefined);
+    const [aceleracion, SetAceleracion] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularFuerza = async() => {
         const respuesta = await 
-        fetch ("http://localhost:3000/fisica/velocidad", {         
+        fetch ("http://localhost:3000/fisica/fuerza", {         
             method: "POST",            
             headers: { "content-TYpe": "application/json" },        
             body: JSON.stringify({              
@@ -38,7 +38,7 @@ function Fuerza() {
                         </label>
                     
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
                         />
                     </div>
 
@@ -48,7 +48,7 @@ function Fuerza() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la aceleración" onChange={(e) => SetAceleracion(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la aceleración" onChange={(e) => SetAceleracion(Number(e.target.value))}
                         />
                     </div>
 

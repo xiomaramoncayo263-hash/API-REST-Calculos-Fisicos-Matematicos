@@ -3,13 +3,13 @@ import fondofisica from "../assets/fondofisica.png";
 
 function Peso() {
 
-    const [masa, SetMasa] = useState(0);
-    const [gravedad, SetGravedad] = useState(0);
+    const [masa, SetMasa] = useState(undefined);
+    const [gravedad, SetGravedad] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularPeso = async() => {
         const respuesta = await 
-        fetch ("http://localhost:3000/fisica/velocidad", {         
+        fetch ("http://localhost:3000/fisica/peso", {         
             method: "POST",            
             headers: { "content-TYpe": "application/json" },        
             body: JSON.stringify({              
@@ -38,7 +38,7 @@ function Peso() {
                         </label>
                     
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la masa" onChange={(e) => SetMasa(Number(e.target.value))}
                         />
                     </div>
 
@@ -48,7 +48,7 @@ function Peso() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la gravedad" onChange={(e) => SetGravedad(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la gravedad" onChange={(e) => SetGravedad(Number(e.target.value))}
                         />
                     </div>
 

@@ -3,8 +3,8 @@ import fondofisica from "../assets/fondofisica.png";
 
 function CatetoOpuesto() {
 
-    const [hipotenusa, SetHipotenusa] = useState(0);
-    const [catetoAdyacente, SetCatetoAdyacente] = useState(0);
+    const [hipotenusa, SetHipotenusa] = useState(undefined);
+    const [catetoAdyacente, SetCatetoAdyacente] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularCatetoOpuesto = async () => {
@@ -38,7 +38,7 @@ function CatetoOpuesto() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la hipotenusa" onChange={(e) => SetHipotenusa(Number(e.target.value))} 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la hipotenusa" onChange={(e) => SetHipotenusa(Number(e.target.value))} 
                         />
                     </div>
 
@@ -48,7 +48,7 @@ function CatetoOpuesto() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor del cateto adyacente" onChange={(e) => SetCatetoAdyacente(Number(e.target.value))} 
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor del cateto adyacente" onChange={(e) => SetCatetoAdyacente(Number(e.target.value))} 
                         />
                     </div>
 

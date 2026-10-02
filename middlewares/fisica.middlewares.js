@@ -89,7 +89,7 @@ export const validarFuerza = (req, res, next) => {
         });
     };
 
-    if (masa < 0 || aceleracion < 0) {
+    if (masa <= 0 || aceleracion <= 0) {
         return res.status(400).json({
             error: "Los valores deben ser positivos"
         });

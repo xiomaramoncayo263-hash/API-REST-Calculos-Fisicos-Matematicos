@@ -3,8 +3,8 @@ import fondofisica from "../assets/fondofisica.png";
 
 function Velocidad() {
 
-    const [distancia, SetDistancia] = useState(0);
-    const [tiempo, SetTiempo] = useState(0);
+    const [distancia, SetDistancia] = useState(undefined);
+    const [tiempo, SetTiempo] = useState(undefined);
     const [resultado, SetResultado] = useState(null);
 
     const calcularVelocidad = async() => {
@@ -39,7 +39,7 @@ function Velocidad() {
                         </label>
                     
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor de la distancia" onChange={(e) => SetDistancia(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor de la distancia" onChange={(e) => SetDistancia(Number(e.target.value))}
                         />
                     </div>
 
@@ -49,7 +49,7 @@ function Velocidad() {
                         </label>
 
                         <input 
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" type="number" placeholder="Ingrese el valor del  tiempo" onChange={(e) => SetTiempo(Number(e.target.value))}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ingrese el valor del  tiempo" onChange={(e) => SetTiempo(Number(e.target.value))}
                         />
                     </div>
 
